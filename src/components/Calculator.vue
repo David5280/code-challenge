@@ -1,6 +1,6 @@
 <template>
   <div class="calculator">
-    <form>
+    <form @submit.prevent="handleSubmit">
       <input 
         v-model='billInfo.totalBill'
         class='calculator-input' 
@@ -65,7 +65,7 @@ export default {
         this.error = true
         return
       }
-      this.$emit('add:employee', this.employee)
+      this.$emit('calculate:tip', this.billInfo)
       this.billInfo = {
         totalBill: '',
         tipPercentage: '',
@@ -75,17 +75,21 @@ export default {
       this.success = true
       this.submitting = false
     },
-    // computed: {
-    //   invalidTotalBill() {
-    //     return this.billInfo.totalBill === ''
-    //   },
-    //   invalidTipPercentage() {
-    //     return this.billInfo.tipPercentage === ''
-    //   },
-    //   invalidPartySize() {
-    //     return this.billInfo.partySize === ''
-    //   },
-    // }
+    clearStatus() {
+      this.success = false
+      this.error = false
+    },
+  },
+    computed: {
+    invalidTotalBill() {
+      return this.billInfo.totalBill === ''
+    },
+    invalidTipPercentage() {
+      return this.billInfo.tipPercentage === ''
+    },
+    invalidPartySize() {
+      return this.billInfo.partySize === ''
+    },
   },
   props: {
     msg: String

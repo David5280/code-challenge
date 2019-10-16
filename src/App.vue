@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Tip Calculator</h1>
     <div class='container'>
-      <Calculator />
+      <Calculator @calculate:tip='calculateTip'/>
       <ResultsContainer />
     </div>
   </div>
