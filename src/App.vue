@@ -1,17 +1,33 @@
 <template>
   <div id="app">
     <h1>Tip Calculator</h1>
-    <Calculator />
+    <div class='container'>
+      <Calculator />
+      <ResultsContainer />
+    </div>
   </div>
 </template>
 
 <script>
-import Calculator from './components/Calculator.vue'
+import Calculator from './components/Calculator.vue';
+import ResultsContainer from './components/ResultsContainer.vue';
 
 export default {
   name: 'app',
+  methods: {
+    calculateTip(billInfo) {
+      const tipAmount = billInfo.totalBill * billInfo.tipPercentage;
+      this.tipAmount = tipAmount;
+    }
+  },
+  data() {
+    return {
+      tipAmount: '',
+    }
+  },
   components: {
-    Calculator
+    Calculator,
+    ResultsContainer
   }
 }
 </script>
@@ -23,10 +39,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+}
+.container {
+  background-color: lightgrey;
+  width: 400px;
+  height: 450px;
+  box-shadow: 1px 1px 15px black;
+  border-radius: 3px;
 }
 </style>
