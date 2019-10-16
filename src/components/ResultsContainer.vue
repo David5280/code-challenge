@@ -8,6 +8,10 @@
       <p>Total:</p>
       <p>{{ results.finalBillAmount }}</p>
     </div>
+    <div class='result-container'>
+      <p>Per Person:</p>
+      <p>{{ results.pricePerPerson }}</p>
+    </div>
   </div>
 </template>
 
@@ -33,6 +37,7 @@ export default {
   }
   .result-container {
     width: 100%;
+    height: 30px;
     display: flex;
     justify-content: space-between;
   }

@@ -1,12 +1,13 @@
 <template>
   <div class="calculator">
     <form @submit.prevent="handleSubmit">
-      <input 
-        v-model='billInfo.totalBill'
-        class='calculator-input' 
-        type='text' 
-        placeholder='Total bill'
-      />
+      <cleave 
+        v-model="billInfo.totalBill" 
+        placeholder='Bill Total' 
+        class="calculator-input" 
+        name="card"
+        :options="options" 
+      ></cleave>
       <select 
         class='calculator-input' 
         name='Tip Percentage'
@@ -24,11 +25,12 @@
         <option value='.40'>40%</option>
         <option value='.50'>50%</option>
       </select>
-      <input 
+      <cleave 
         class='calculator-input' 
         type='text' 
         placeholder='Party Size' 
         v-model='billInfo.partySize'
+        :options="options" 
       />
       <div class='error-container'>
         <p v-if="error && submitting" class="error-message">
@@ -41,6 +43,8 @@
 </template>
 
 <script>
+import Cleave from 'vue-cleave-component';
+
 export default {
   name: 'Calculator',
   data() {
@@ -48,14 +52,20 @@ export default {
       submitting: false,
       error: false,
       success: false,
+      tipTotal: '',
+      billTotal: '',
       billInfo: {
         totalBill: '',
         tipPercentage: '',
         partySize: '',
       },
-      tipTotal: '',
-      billTotal: '',
+      options: {
+        numeral: true,
+      }
     };
+  },
+  components: {
+    Cleave
   },
   methods: {
     handleSubmit() {
