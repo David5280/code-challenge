@@ -1,25 +1,33 @@
 <template>
   <div class="calculator">
     <input 
+      v-model='billInfo.totalBill'
       class='calculator-input' 
       type='text' 
       placeholder='Total bill'
     />
-    <select class='calculator-input' name='Tip Percentage'>
-      <option value='5%'>5%</option>
-      <option value='10%'>10%</option>
-      <option value='15%'>15%</option>
-      <option value='20%'>20%</option>
-      <option value='25%'>25%</option>
-      <option value='30%'>30%</option>
-      <option value='35%'>35%</option>
-      <option value='40%'>40%</option>
-      <option value='50%'>50%</option>
+    <select 
+      class='calculator-input' 
+      name='Tip Percentage'
+      v-model='billInfo.tipPercentage'
+      placeholder='Tip Percentage'
+    >
+      <option value="" disabled selected>Tip Percentage</option>
+      <option value='.05'>5%</option>
+      <option value='.10'>10%</option>
+      <option value='.15'>15%</option>
+      <option value='.20'>20%</option>
+      <option value='.25'>25%</option>
+      <option value='.30'>30%</option>
+      <option value='.35'>35%</option>
+      <option value='.40'>40%</option>
+      <option value='.50'>50%</option>
     </select>
     <input 
       class='calculator-input' 
       type='text' 
       placeholder='Party Size' 
+      v-model='billInfo.partySize'
     />
     <button class='calculator-submit'>Calculate</button>
     <div class='results-container'>
@@ -36,6 +44,15 @@
 <script>
 export default {
   name: 'Calculator',
+  data() {
+    return {
+      billInfo: {
+        totalBill: '',
+        tipPercentage: '',
+        partySize: '',
+      }
+    };
+  },
   props: {
     msg: String
   }
@@ -79,7 +96,7 @@ export default {
   .result-container {
     width: 98%;
     display: flex;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding-left: 10px;
     /* justify-content: space-between; */
   }
