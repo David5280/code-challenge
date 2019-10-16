@@ -2,9 +2,11 @@
   <div class='results-container'>
     <div class='result-container'>
       <p>Tip:</p>
+      <p>{{ results.tipAmount }}</p>
     </div>
     <div class='result-container'>
       <p>Total:</p>
+      <p>{{ results.finalBillAmount }}</p>
     </div>
   </div>
 </template>
@@ -16,7 +18,7 @@ export default {
 
   },
   props: {
-    msg: String
+    results: Object
   }
 }
 </script>
@@ -32,5 +34,6 @@ export default {
   .result-container {
     width: 100%;
     display: flex;
+    justify-content: space-between;
   }
 </style>

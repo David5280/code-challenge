@@ -3,7 +3,7 @@
     <h1>Tip Calculator</h1>
     <div class='container'>
       <Calculator @calculate:tip='calculateTip'/>
-      <ResultsContainer />
+      <ResultsContainer :results='results'/>
     </div>
   </div>
 </template>
@@ -19,16 +19,18 @@ export default {
       const tipAmount = billInfo.totalBill * billInfo.tipPercentage;
       const finalBillAmount = parseInt(billInfo.totalBill) + parseInt(tipAmount);
       const pricePerPerson = finalBillAmount / billInfo.partySize;
-      this.tipAmount = tipAmount;
-      this.finalBillAmount = finalBillAmount;
-      this.pricePerPerson = pricePerPerson;
+      this.results.tipAmount = tipAmount;
+      this.results.finalBillAmount = finalBillAmount;
+      this.results.pricePerPerson = pricePerPerson;
     }
   },
   data() {
     return {
-      tipAmount: '',
-      finalBillAmount: '',
-      pricePerPerson: '',
+      results: {
+        tipAmount: '',
+        finalBillAmount: '',
+        pricePerPerson: '',
+      }
     }
   },
   components: {

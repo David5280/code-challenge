@@ -30,9 +30,11 @@
         placeholder='Party Size' 
         v-model='billInfo.partySize'
       />
-      <p v-if="error && submitting" class="error-message">
-        Please fill out all required fields
-      </p>
+      <div class='error-container'>
+        <p v-if="error && submitting" class="error-message">
+          Please fill out all required fields
+        </p>
+      </div>
       <button class='calculator-submit'>Calculate</button>
     </form>
   </div>
@@ -118,5 +120,11 @@ export default {
     margin-left: auto;
     border-radius: 3px;
     border: 1px solid grey;
+  }
+  .error-container {
+    height: 20px;
+  }
+  .error-message {
+    margin: auto;
   }
 </style>
