@@ -2,15 +2,15 @@
   <div class='results-container'>
     <div class='result-container'>
       <p>Tip:</p>
-      <p>{{ results.tipAmount }}</p>
+      <p v-if='results.tipAmount'>${{ results.tipAmount }}</p>
     </div>
     <div class='result-container'>
       <p>Total:</p>
-      <p>{{ results.finalBillAmount }}</p>
+      <p v-if='results.finalBillAmount'>${{ results.finalBillAmount }}</p>
     </div>
     <div class='result-container'>
       <p>Per Person:</p>
-      <p>{{ results.pricePerPerson }}</p>
+      <p v-if='results.pricePerPerson'>${{ results.pricePerPerson }}</p>
     </div>
   </div>
 </template>
