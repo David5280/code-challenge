@@ -10,6 +10,7 @@
   "dependencies": {
     "cleave.js": "^1.5.3",
     "core-js": "^3.1.2",
+    "numeral": "^2.0.6",
     "vue": "^2.6.10",
     "vue-cleave-component": "^2.1.3"
   },
