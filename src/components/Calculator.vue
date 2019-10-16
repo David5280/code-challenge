@@ -46,12 +46,49 @@ export default {
   name: 'Calculator',
   data() {
     return {
+      submitting: false,
+      error: false,
+      success: false,
       billInfo: {
         totalBill: '',
         tipPercentage: '',
         partySize: '',
-      }
+      },
+      tipTotal: '',
+      billTotal: '',
     };
+  },
+  methods: {
+    handleSubmit() {
+      this.submitting = true
+      this.clearStatus()
+      if (this.invalidTotalBill || 
+        this.invalidTipPercentage || 
+        this.invalidPartySize) {
+        this.error = true
+        return
+      }
+      this.$emit('add:employee', this.employee)
+      this.billInfo = {
+        totalBill: '',
+        tipPercentage: '',
+        partySize: '',
+      }
+      this.error = false
+      this.success = true
+      this.submitting = false
+    },
+    computed: {
+      invalidTotalBill() {
+        return this.billInfo.totalBill === ''
+      },
+      invalidTipPercentage() {
+        return this.billInfo.tipPercentage === ''
+      },
+      invalidPartySize() {
+        return this.billInfo.partySize === ''
+      },
+    }
   },
   props: {
     msg: String
