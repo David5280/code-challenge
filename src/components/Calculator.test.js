@@ -6,6 +6,10 @@ describe('Calculator', () => {
     const wrapper = mount(Calculator)
     expect(wrapper.isVueInstance()).toBeTruthy()
   });
+  test('should match the snapshot', () => {
+    const wrapper = mount(Calculator);
+    expect(wrapper.vm.$el).toMatchSnapshot();
+  });
   test('throws an error under when tip amount is missing', () => {
     const wrapper = mount(Calculator);
     wrapper.find('#bill-amount-input').setValue('1000')
