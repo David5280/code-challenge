@@ -1,16 +1,18 @@
 <template>
-  <div class="calculator">
+  <div class='calculator'>
     <form @submit.prevent="handleSubmit">
       <cleave 
         v-model="billInfo.totalBill" 
         placeholder='Bill Amount' 
         class='calculator-input'
+        id='bill-amount-input'
         name="card"
         :class="{ 'has-error': submitting && invalidTotalBill }"
         :options="options" 
       ></cleave>
       <select 
         class='calculator-input' 
+        id='tip-amount-input'
         :class="{ 'has-error': submitting && invalidTipPercentage }"
         name='Tip Percentage'
         v-model='billInfo.tipPercentage'
@@ -101,13 +103,7 @@ export default {
     invalidTipPercentage() {
       return this.billInfo.tipPercentage === ''
     },
-    invalidPartySize() {
-      return this.billInfo.partySize === ''
-    },
   },
-  props: {
-    msg: String
-  }
 }
 </script>
 
@@ -126,6 +122,9 @@ export default {
     border-radius: 3px;
     border: 1px solid grey;
     padding-left: 10px;
+  }
+  select {
+    cursor: pointer;
   }
   .calculator-submit {
     width: 150px;

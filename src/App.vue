@@ -23,6 +23,8 @@ export default {
         if (billInfo.partySize) {
         const pricePerPerson = finalBillAmount / billInfo.partySize;
         this.results.pricePerPerson = pricePerPerson.toFixed(2);
+        } else {
+          this.results.pricePerPerson = '';
         }
       this.results.tipAmount = tipAmount.toFixed(2);
       this.results.finalBillAmount = finalBillAmount.toFixed(2);
@@ -73,7 +75,7 @@ export default {
   flex-direction: column;
   background-color: rgb(211, 211, 211);
   align-items: center;
-  transition: .5s ease-in-out;
+  transition: .2s ease-in;
 }
 h1 {
   margin: 50px 0px;
