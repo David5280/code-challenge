@@ -103,7 +103,7 @@ export default {
 }
 
 .theme2 {
-  background-image: url('./assets/images/thumbs-up.png');
+  background-image: url('./assets/images/good-tip.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
