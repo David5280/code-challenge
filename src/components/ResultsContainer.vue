@@ -2,13 +2,13 @@
   <div class='results-container'>
     <div class='result-container'>
       <p>Tip:</p>
-      <p v-if='results.tipAmount'>${{ results.tipAmount | numeral('0,0.00') }}</p>
+      <p class='tip-display' v-if='results.tipAmount'>${{ results.tipAmount | numeral('0,0.00') }}</p>
     </div>
     <div class='result-container'>
       <p>Total:</p>
-      <p v-if='results.finalBillAmount'>${{ results.finalBillAmount | numeral('0,0.00')  }}</p>
+      <p class='bill-display' v-if='results.finalBillAmount'>${{ results.finalBillAmount | numeral('0,0.00')  }}</p>
     </div>
-    <div class='result-container' v-if='results.pricePerPerson'>
+    <div class='result-container per-person-display' v-if='results.pricePerPerson'>
       <p>Per Person:</p>
       <p>${{ results.pricePerPerson | numeral('0,0.00')  }}</p>
     </div>

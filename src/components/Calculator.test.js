@@ -18,7 +18,7 @@ describe('Calculator', () => {
     wrapper.find('form').trigger('submit.prevent')
     expect(wrapper.find('.error-message').exists()).toBe(true);
   });
-  test('does not throw an error under when inputs are valid', () => {
+  test('does not throw an error when inputs are valid', () => {
     const wrapper = mount(Calculator);
     wrapper.find('#bill-amount-input').setValue('1000')
     wrapper.find('#tip-amount-input').setValue('.25')
