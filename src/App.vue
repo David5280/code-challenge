@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
-    <h1>Tip Calculator</h1>
+  <div id="app" :class='this.theme'>
+    <div class='title'>
+      <h1>Tip Calculator</h1>
+    </div>
     <div class='container'>
       <Calculator @calculate:tip='calculateTip'/>
       <ResultsContainer :results='results'/>
@@ -26,6 +28,16 @@ export default {
         }
       this.results.tipAmount = tipAmount.toFixed(2);
       this.results.finalBillAmount = finalBillAmount.toFixed(2);
+      this.determineTheme(billInfo.tipPercentage);
+    },
+    determineTheme(tipPercentage) {
+      if (tipPercentage <= .15) {
+        this.theme = 'theme1'
+      } else if (tipPercentage > .15 && tipPercentage <= .30) {
+        this.theme = 'theme2'
+      } else if (tipPercentage > .30) {
+        this.theme = 'theme3'
+      }
     }
   },
   data() {
@@ -34,7 +46,8 @@ export default {
         tipAmount: '',
         finalBillAmount: '',
         pricePerPerson: '',
-      }
+      },
+      theme: ''
     }
   },
   components: {
@@ -60,21 +73,47 @@ export default {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  background-color: rgb(211, 211, 211);
   align-items: center;
 }
-h1 {
+.title {
+  background-color: rgba(211, 211, 211, 0.8);
   margin: 50px 0px;
+  height: fit-content;
 }
+
 .container {
-  background-color: lightgrey;
+  background-color: rgba(240, 236, 236, 0.8);
   min-width: 300px;
   max-width: 500px;
   width: 25vw;
-  height: 350px;
+  height: 375px;
   box-shadow: 1px 1px 15px black;
   border-radius: 3px;
   border: 1px solid black;
   padding: 20px;
 }
+
+.theme1 {
+  background-color: red;
+  background-image: url('./assets/images/no-money.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.theme2 {
+  background-image: url('./assets/images/thumbs-up.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.theme3 {
+  background-image: url('./assets/images/big-baller.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
 </style>
