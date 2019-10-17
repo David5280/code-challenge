@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsContainer should match the snapshot 1`] = `
+<div
+  class="results-container"
+>
+  <div
+    class="result-container"
+  >
+    <p>
+      Tip:
+    </p>
+     
+    <p
+      class="tip-display"
+    >
+      
+      $200
+    
+    </p>
+  </div>
+   
+  <div
+    class="result-container"
+  >
+    <p>
+      Total:
+    </p>
+     
+    <p
+      class="bill-display"
+    >
+      
+      $1000
+    
+    </p>
+  </div>
+   
+  <!---->
+</div>
+`;

@@ -38,7 +38,10 @@
         :options="options" 
       />
       <div class='error-container'>
-        <p v-if="error && submitting" class="error-message">
+        <p 
+          v-if="error && submitting" 
+          class="error-message"
+        >
           Please fill out all required fields
         </p>
       </div>
@@ -104,34 +107,33 @@ export default {
       return this.billInfo.tipPercentage === ''
     },
   },
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   form {
-    /* padding: 20px; */
-    height: 250px;
     display: flex;
     flex-direction: column;
+    height: 250px;
     justify-content: space-evenly;
   }
   .calculator-input {
-    width: 100%;
-    height: 35px;
     border-radius: 3px;
     border: 1px solid grey;
+    height: 35px;
     padding-left: 10px;
+    width: 100%;
   }
   select {
     cursor: pointer;
   }
   .calculator-submit {
-    width: 150px;
-    height: 35px;
-    margin-left: auto;
     border-radius: 3px;
     border: 1px solid grey;
+    height: 35px;
+    margin-left: auto;
+    width: 150px;
   }
   .error-container {
     height: 20px;

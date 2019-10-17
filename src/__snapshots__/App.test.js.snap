@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot 1`] = `
+<div
+  class=""
+  id="app"
+>
+  <h1>
+    Tip Calculator
+  </h1>
+   
+  <div
+    class="container"
+  >
+    <div
+      class="calculator"
+    >
+      <form>
+        <input
+          class="calculator-input"
+          id="bill-amount-input"
+          name="card"
+          placeholder="Bill Amount"
+          type="text"
+          value=""
+        />
+         
+        <select
+          class="calculator-input"
+          id="tip-amount-input"
+          name="Tip Percentage"
+          placeholder="Tip Percentage"
+        >
+          <option
+            disabled="disabled"
+            selected="selected"
+            value=""
+          >
+            Tip Percentage
+          </option>
+           
+          <option
+            value=".05"
+          >
+            5%
+          </option>
+           
+          <option
+            value=".10"
+          >
+            10%
+          </option>
+           
+          <option
+            value=".15"
+          >
+            15%
+          </option>
+           
+          <option
+            value=".20"
+          >
+            20%
+          </option>
+           
+          <option
+            value=".25"
+          >
+            25%
+          </option>
+           
+          <option
+            value=".30"
+          >
+            30%
+          </option>
+           
+          <option
+            value=".35"
+          >
+            35%
+          </option>
+           
+          <option
+            value=".40"
+          >
+            40%
+          </option>
+           
+          <option
+            value=".45"
+          >
+            45%
+          </option>
+           
+          <option
+            value=".50"
+          >
+            50%
+          </option>
+        </select>
+         
+        <input
+          class="calculator-input"
+          placeholder="Party Size (Optional)"
+          type="text"
+          value=""
+        />
+         
+        <div
+          class="error-container"
+        >
+          <!---->
+        </div>
+         
+        <button
+          class="calculator-submit"
+        >
+          Calculate
+        </button>
+      </form>
+    </div>
+     
+    <div
+      class="results-container"
+    >
+      <div
+        class="result-container"
+      >
+        <p>
+          Tip:
+        </p>
+         
+        <!---->
+      </div>
+       
+      <div
+        class="result-container"
+      >
+        <p>
+          Total:
+        </p>
+         
+        <!---->
+      </div>
+       
+      <!---->
+    </div>
+  </div>
+</div>
+`;
