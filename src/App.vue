@@ -73,7 +73,7 @@ export default {
   flex-direction: column;
   background-color: rgb(211, 211, 211);
   align-items: center;
-  transition: .5s ease-in-out;
+  transition: .2s ease-in;
 }
 h1 {
   margin: 50px 0px;

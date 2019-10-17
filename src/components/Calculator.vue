@@ -127,6 +127,9 @@ export default {
     border: 1px solid grey;
     padding-left: 10px;
   }
+  select {
+    cursor: pointer;
+  }
   .calculator-submit {
     width: 150px;
     height: 35px;
