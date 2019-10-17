@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">16.67% </span>
+        <span class="strong">94.44% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/18</span>
+        <span class='fraction'>17/18</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">80% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/10</span>
+        <span class='fraction'>8/10</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>1/3</span>
+        <span class='fraction'>3/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">16.67% </span>
+        <span class="strong">94.44% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>3/18</span>
+        <span class='fraction'>17/18</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -186,32 +186,32 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -307,28 +307,28 @@ import ResultsContainer from './components/ResultsContainer.vue';
 export default {
   name: 'app',
   methods: {
-<span class="fstat-no" title="function not covered" >    calculateTip(billInfo) {</span>
-<span class="cstat-no" title="statement not covered" >      const tipAmount = billInfo.totalBill * billInfo.tipPercentage;</span>
-<span class="cstat-no" title="statement not covered" >      const finalBillAmount = </span>
+    calculateTip(billInfo) {
+      const tipAmount = billInfo.totalBill * billInfo.tipPercentage;
+      const finalBillAmount = 
         parseInt(billInfo.totalBill) + 
         parseInt(tipAmount);
-<span class="cstat-no" title="statement not covered" >        if (billInfo.partySize) {</span>
-<span class="cstat-no" title="statement not covered" >        const pricePerPerson = finalBillAmount / billInfo.partySize;</span>
-<span class="cstat-no" title="statement not covered" >        this.results.pricePerPerson = pricePerPerson.toFixed(2);</span>
+        if (billInfo.partySize) {
+        const pricePerPerson = finalBillAmount / billInfo.partySize;
+        this.results.pricePerPerson = pricePerPerson.toFixed(2);
         } else {
-<span class="cstat-no" title="statement not covered" >          this.results.pricePerPerson = '';</span>
+          this.results.pricePerPerson = '';
         }
-<span class="cstat-no" title="statement not covered" >      this.results.tipAmount = tipAmount.toFixed(2);</span>
-<span class="cstat-no" title="statement not covered" >      this.results.finalBillAmount = finalBillAmount.toFixed(2);</span>
-<span class="cstat-no" title="statement not covered" >      this.determineTheme(billInfo.tipPercentage);</span>
+      this.results.tipAmount = tipAmount.toFixed(2);
+      this.results.finalBillAmount = finalBillAmount.toFixed(2);
+      this.determineTheme(billInfo.tipPercentage);
     },
-<span class="fstat-no" title="function not covered" >    determineTheme(tipPercentage) {</span>
-<span class="cstat-no" title="statement not covered" >      if (tipPercentage &lt;= .15) {</span>
+    determineTheme(tipPercentage) {
+<span class="missing-if-branch" title="if path not taken" >I</span>      if (tipPercentage &lt;= .15) {
 <span class="cstat-no" title="statement not covered" >        this.theme = 'theme1'</span>
-<span class="cstat-no" title="statement not covered" >      } else if (tipPercentage &gt; .15 &amp;&amp; tipPercentage &lt;= .30) {</span>
-<span class="cstat-no" title="statement not covered" >        this.theme = 'theme2'</span>
-<span class="cstat-no" title="statement not covered" >      } else if (tipPercentage &gt; .30) {</span>
-<span class="cstat-no" title="statement not covered" >        this.theme = 'theme3'</span>
+      } else if (tipPercentage &gt; .15 &amp;&amp; tipPercentage &lt;= .30) {
+        this.theme = 'theme2'
+<span class="missing-if-branch" title="else path not taken" >E</span>      } else if (tipPercentage &gt; .30) {
+        this.theme = 'theme3'
       }
     }
   },
@@ -418,7 +418,7 @@ h1 {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Oct 17 2019 10:01:06 GMT-0600 (Mountain Daylight Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Oct 17 2019 10:14:25 GMT-0600 (Mountain Daylight Time)
 </div>
 </div>
 <script src="../prettify.js"></script>
