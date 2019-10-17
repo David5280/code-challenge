@@ -1,0 +1,45 @@
+<template>
+  <div class='results-container'>
+    <div class='result-container'>
+      <p>Tip:</p>
+      <p v-if='results.tipAmount'>${{ results.tipAmount | numeral('0,0.00') }}</p>
+    </div>
+    <div class='result-container'>
+      <p>Total:</p>
+      <p v-if='results.finalBillAmount'>${{ results.finalBillAmount | numeral('0,0.00')  }}</p>
+    </div>
+    <div class='result-container' v-if='results.pricePerPerson'>
+      <p>Per Person:</p>
+      <p>${{ results.pricePerPerson | numeral('0,0.00')  }}</p>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ResultsContainer',
+  methods: {
+
+  },
+  props: {
+    results: Object
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  .results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* height: 125px; */
+  }
+  .result-container {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+</style>
