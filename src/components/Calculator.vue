@@ -103,13 +103,7 @@ export default {
     invalidTipPercentage() {
       return this.billInfo.tipPercentage === ''
     },
-    invalidPartySize() {
-      return this.billInfo.partySize === ''
-    },
   },
-  props: {
-    msg: String
-  }
 }
 </script>
 
