@@ -20,10 +20,12 @@ export default {
       const finalBillAmount = 
         parseInt(billInfo.totalBill) + 
         parseInt(tipAmount);
-      const pricePerPerson = finalBillAmount / billInfo.partySize;
+        if (billInfo.partySize) {
+        const pricePerPerson = finalBillAmount / billInfo.partySize;
+        this.results.pricePerPerson = pricePerPerson.toFixed(2);
+        }
       this.results.tipAmount = tipAmount.toFixed(2);
       this.results.finalBillAmount = finalBillAmount.toFixed(2);
-      this.results.pricePerPerson = pricePerPerson.toFixed(2);
     }
   },
   data() {
@@ -62,5 +64,6 @@ export default {
   height: 450px;
   box-shadow: 1px 1px 15px black;
   border-radius: 3px;
+  border: 1px solid black;
 }
 </style>

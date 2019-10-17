@@ -3,7 +3,7 @@
     <form @submit.prevent="handleSubmit">
       <cleave 
         v-model="billInfo.totalBill" 
-        placeholder='Bill Total' 
+        placeholder='Bill Amount' 
         class='calculator-input'
         name="card"
         :class="{ 'has-error': submitting && invalidTotalBill }"
@@ -30,10 +30,9 @@
       <cleave 
         class='calculator-input' 
         type='text' 
-        placeholder='Party Size' 
+        placeholder='Party Size (Optional)' 
         v-model='billInfo.partySize'
         :options="options" 
-        :class="{ 'has-error': submitting && invalidPartySize }"
       />
       <div class='error-container'>
         <p v-if="error && submitting" class="error-message">
@@ -75,8 +74,7 @@ export default {
       this.submitting = true
       this.clearStatus()
       if (this.invalidTotalBill || 
-        this.invalidTipPercentage || 
-        this.invalidPartySize) {
+        this.invalidTipPercentage) {
         this.error = true
         return
       }

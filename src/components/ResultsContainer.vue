@@ -8,9 +8,9 @@
       <p>Total:</p>
       <p v-if='results.finalBillAmount'>${{ results.finalBillAmount | numeral('0,0.00')  }}</p>
     </div>
-    <div class='result-container'>
+    <div class='result-container' v-if='results.pricePerPerson'>
       <p>Per Person:</p>
-      <p v-if='results.pricePerPerson'>${{ results.pricePerPerson | numeral('0,0.00') }}</p>
+      <p>${{ results.pricePerPerson | numeral('0,0.00')  }}</p>
     </div>
   </div>
 </template>
@@ -33,7 +33,9 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
     padding: 20px;
+    height: 125px;
   }
   .result-container {
     width: 100%;
