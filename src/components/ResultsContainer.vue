@@ -2,13 +2,20 @@
   <div class='results-container'>
     <div class='result-container'>
       <p>Tip:</p>
-      <p class='tip-display' v-if='results.tipAmount'>${{ results.tipAmount | numeral('0,0.00') }}</p>
+      <p class='tip-display' v-if='results.tipAmount'>
+        ${{ results.tipAmount | numeral('0,0.00') }}
+      </p>
     </div>
     <div class='result-container'>
       <p>Total:</p>
-      <p class='bill-display' v-if='results.finalBillAmount'>${{ results.finalBillAmount | numeral('0,0.00')  }}</p>
+      <p class='bill-display' v-if='results.finalBillAmount'>
+        ${{ results.finalBillAmount | numeral('0,0.00')  }}
+      </p>
     </div>
-    <div class='result-container per-person-display' v-if='results.pricePerPerson'>
+    <div 
+      class='result-container per-person-display' 
+      v-if='results.pricePerPerson'
+    >
       <p>Per Person:</p>
       <p>${{ results.pricePerPerson | numeral('0,0.00')  }}</p>
     </div>
@@ -18,9 +25,6 @@
 <script>
 export default {
   name: 'ResultsContainer',
-  methods: {
-
-  },
   props: {
     results: Object
   }
@@ -30,16 +34,15 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .results-container {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: flex-start;
-    /* height: 125px; */
   }
   .result-container {
-    width: 100%;
-    height: 30px;
     display: flex;
+    height: 30px;
     justify-content: space-between;
+    width: 100%;
   }
 </style>
