@@ -75,6 +75,7 @@ export default {
   flex-direction: column;
   background-color: rgb(211, 211, 211);
   align-items: center;
+  transition: .5s ease-in-out;
 }
 .title {
   background-color: rgba(211, 211, 211, 0.8);
