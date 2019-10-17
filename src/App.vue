@@ -1,8 +1,6 @@
 <template>
   <div id="app" :class='this.theme'>
-    <div class='title'>
-      <h1>Tip Calculator</h1>
-    </div>
+    <h1>Tip Calculator</h1>
     <div class='container'>
       <Calculator @calculate:tip='calculateTip'/>
       <ResultsContainer :results='results'/>
@@ -77,8 +75,7 @@ export default {
   align-items: center;
   transition: .5s ease-in-out;
 }
-.title {
-  background-color: rgba(211, 211, 211, 0.8);
+h1 {
   margin: 50px 0px;
   height: fit-content;
 }
@@ -96,15 +93,17 @@ export default {
 }
 
 .theme1 {
-  background-color: red;
   background-image: url('./assets/images/no-money.png');
+  background-blend-mode: overlay;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  mix-blend-mode: screen;
 }
 
 .theme2 {
   background-image: url('./assets/images/good-tip.png');
+  background-blend-mode: overlay;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -112,6 +111,7 @@ export default {
 
 .theme3 {
   background-image: url('./assets/images/big-baller.jpg');
+  background-blend-mode: darken;
   background-size: cover;
   background-position: center;
 }
