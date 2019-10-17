@@ -10,7 +10,7 @@
     </div>
     <div class='result-container'>
       <p>Per Person:</p>
-      <p v-if='results.pricePerPerson'>${{ results.pricePerPerson | numeral('0,0.00')  }}</p>
+      <p v-if='results.pricePerPerson'>${{ results.pricePerPerson | numeral('0,0.00') }}</p>
     </div>
   </div>
 </template>

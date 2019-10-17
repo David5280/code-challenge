@@ -4,12 +4,14 @@
       <cleave 
         v-model="billInfo.totalBill" 
         placeholder='Bill Total' 
-        class="calculator-input" 
+        class='calculator-input'
         name="card"
+        :class="{ 'has-error': submitting && invalidTotalBill }"
         :options="options" 
       ></cleave>
       <select 
         class='calculator-input' 
+        :class="{ 'has-error': submitting && invalidTipPercentage }"
         name='Tip Percentage'
         v-model='billInfo.tipPercentage'
         placeholder='Tip Percentage'
@@ -31,6 +33,7 @@
         placeholder='Party Size' 
         v-model='billInfo.partySize'
         :options="options" 
+        :class="{ 'has-error': submitting && invalidPartySize }"
       />
       <div class='error-container'>
         <p v-if="error && submitting" class="error-message">
@@ -136,5 +139,8 @@ export default {
   }
   .error-message {
     margin: auto;
+  }
+  .has-error {
+    border: 1px solid red;
   }
 </style>
