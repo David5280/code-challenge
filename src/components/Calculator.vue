@@ -5,12 +5,14 @@
         v-model="billInfo.totalBill" 
         placeholder='Bill Amount' 
         class='calculator-input'
+        id='bill-amount-input'
         name="card"
         :class="{ 'has-error': submitting && invalidTotalBill }"
         :options="options" 
       ></cleave>
       <select 
         class='calculator-input' 
+        id='tip-amount-input'
         :class="{ 'has-error': submitting && invalidTipPercentage }"
         name='Tip Percentage'
         v-model='billInfo.tipPercentage'

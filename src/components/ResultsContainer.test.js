@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import ResultsContainer from './ResultsContainer';
 
-describe('Component', () => {
+describe('ResultsContainer', () => {
   test('is a Vue instance', () => {
     const wrapper = mount(ResultsContainer, {
       propsData: {
@@ -10,7 +10,7 @@ describe('Component', () => {
           finalBillAmount: '1000'
         }
       }
-    })
+    });
     expect(wrapper.isVueInstance()).toBeTruthy()
   });
 });
