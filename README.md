@@ -3,7 +3,7 @@ David Engel (https://github.com/David5280)
 
 ## Summary
 This tip calculator was a code challenge given to me with the specs below.  
-<img src="https://user-images.githubusercontent.com/46681659/67022590-b1443300-f0be-11e9-9d25-8b9e5a4cef2f.png" width="650">
+<img src="https://user-images.githubusercontent.com/46681659/67022590-b1443300-f0be-11e9-9d25-8b9e5a4cef2f.png" width="650"><br />
 This application:
 - Returns the tip amount when valid inputs are submitted.
 - Validates inputs and displays a prompt when they are invalid
