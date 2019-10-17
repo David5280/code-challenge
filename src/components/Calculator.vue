@@ -1,5 +1,5 @@
 <template>
-  <div class="calculator">
+  <div class='calculator'>
     <form @submit.prevent="handleSubmit">
       <cleave 
         v-model="billInfo.totalBill" 

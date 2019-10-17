@@ -23,6 +23,8 @@ export default {
         if (billInfo.partySize) {
         const pricePerPerson = finalBillAmount / billInfo.partySize;
         this.results.pricePerPerson = pricePerPerson.toFixed(2);
+        } else {
+          this.results.pricePerPerson = '';
         }
       this.results.tipAmount = tipAmount.toFixed(2);
       this.results.finalBillAmount = finalBillAmount.toFixed(2);
