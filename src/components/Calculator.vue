@@ -113,7 +113,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   form {
-    padding: 20px;
+    /* padding: 20px; */
     height: 250px;
     display: flex;
     flex-direction: column;
@@ -124,6 +124,7 @@ export default {
     height: 35px;
     border-radius: 3px;
     border: 1px solid grey;
+    padding-left: 10px;
   }
   .calculator-submit {
     width: 150px;
@@ -139,6 +140,6 @@ export default {
     margin: auto;
   }
   .has-error {
-    border: 1px solid red;
+    border: 1.5px solid red;
   }
 </style>

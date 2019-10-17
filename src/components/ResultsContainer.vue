@@ -34,7 +34,6 @@ export default {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 20px;
     height: 125px;
   }
   .result-container {

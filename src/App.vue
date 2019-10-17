@@ -45,6 +45,11 @@ export default {
 </script>
 
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -55,15 +60,21 @@ export default {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* justify-content: center; */
   align-items: center;
+}
+h1 {
+  margin: 50px 0px;
 }
 .container {
   background-color: lightgrey;
-  width: 400px;
-  height: 450px;
+  min-width: 300px;
+  max-width: 500px;
+  width: 25vw;
+  height: 350px;
   box-shadow: 1px 1px 15px black;
   border-radius: 3px;
   border: 1px solid black;
+  padding: 20px;
 }
 </style>
