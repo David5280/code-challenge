@@ -14,7 +14,7 @@ module.exports = {
     'src/components/*.{js,vue}',
     'src/*.{js,vue}',
     '!src/main.js',
-    '!**/node_modules/**',
+    '!node_modules',
   ],
   coverageReporters: [
     'html',

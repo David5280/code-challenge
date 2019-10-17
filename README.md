@@ -12,7 +12,7 @@ This application:
 - Coditionally renders a background depending on if the tip perentage is poor, decent, or great.
 - Is tested with [Jest](https://jestjs.io/)
 
-![Coverage Summary](https://user-images.githubusercontent.com/46681659/67023418-059be280-f0c0-11e9-9d05-ac6354ebbd27.png)
+![Coverage Summary](https://user-images.githubusercontent.com/46681659/67027880-99bd7800-f0c7-11e9-8ccc-b9d3eac84865.png)
 
 ## Project setup
 ```
